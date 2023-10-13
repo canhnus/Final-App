@@ -23,7 +23,7 @@ class Album < ActiveRecord::Base
     # Cach 1
     # validates :descripttion, uniqueness: {scope: :title, message: 'is not a duplicated'}
     # Cach 2
-    # validates_uniqueness_of :descripttion, scope: :title, message: 'is not a duplicated'
+    validates_uniqueness_of :descripttion, scope: :title, message: 'is not a duplicated'
     
 
   
