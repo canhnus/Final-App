@@ -18,7 +18,7 @@ class Album < ActiveRecord::Base
 
     # validates :descripttion, length: { minimum: 5, too_short: '%{count} is the minimum length you must have'}
 
-    validates :photo_count, numericality: {greater_than: 1, even: true}
+    # validates :photo_count, numericality: {greater_than: 1, even: true}
 
     # Cach 1
     # validates :descripttion, uniqueness: {scope: :title, message: 'is not a duplicated'}
