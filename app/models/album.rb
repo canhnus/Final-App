@@ -16,7 +16,7 @@ class Album < ActiveRecord::Base
 
 
 
-    validates :descripttion, length: { minimum: 5, too_short: '%{count} is the minimum length you must have'}
+    # validates :descripttion, length: { minimum: 5, too_short: '%{count} is the minimum length you must have'}
 
     validates :photo_count, numericality: {greater_than: 1, even: true}
 
