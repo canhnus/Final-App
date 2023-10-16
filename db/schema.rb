@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_05_075654) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_16_102427) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,29 +20,29 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_05_075654) do
     t.datetime "publication_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id"
-    t.integer "photo_count"
+    t.integer "user_id"
+    t.integer "photos_count"
   end
 
   create_table "photos", force: :cascade do |t|
     t.string "photo_url"
-    t.datetime "created_date", default: "2023-10-13 01:16:25"
+    t.datetime "created_date", default: "2023-10-16 10:26:02"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "album_id", null: false
+    t.integer "album_id"
   end
 
-  create_table "users", primary_key: "user_code", id: :serial, force: :cascade do |t|
-    t.string "last_name", limit: 25
-    t.string "first_name", limit: 25
-    t.string "email", limit: 256
-    t.string "password", limit: 64
+  create_table "users", force: :cascade do |t|
+    t.string "last_name", null: false
+    t.string "first_name", null: false
+    t.string "email", null: false
+    t.string "password", null: false
     t.integer "access_right"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "albums", "users", column: "author_id", primary_key: "user_code"
+  add_foreign_key "albums", "users"
   add_foreign_key "photos", "albums"
 end

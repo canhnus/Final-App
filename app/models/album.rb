@@ -1,10 +1,12 @@
 class Album < ActiveRecord::Base
     # Association
-    belongs_to :user, primary_key: "user_code", foreign_key: "account_id"
+    # belongs_to :user, primary_key: "user_code", foreign_key: "account_id"
+    belongs_to :user
+
     has_many :photos 
 
     # Query Interface
-    scope :description, -> {where(descripttion: "asc")}
+    # scope :description, -> {where(descripttion: "asc")}
 
     # Validate
     # validates :url, presence: true
@@ -23,7 +25,7 @@ class Album < ActiveRecord::Base
     # Cach 1
     # validates :descripttion, uniqueness: {scope: :title, message: 'is not a duplicated'}
     # Cach 2
-    validates_uniqueness_of :descripttion, scope: :title, message: 'is not a duplicated'
+    # validates_uniqueness_of :descripttion, scope: :title, message: 'is not a duplicated'
     
 
   
