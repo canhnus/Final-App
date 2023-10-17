@@ -4,9 +4,14 @@ class User < ApplicationRecord
     # has_many :albums, primary_key: :user_code, foreign_key: "account_id"
 
     has_many :albums
-
+    enum status: [:active, :inactive]
 
     validates_associated :albums
+
+    scope :active, -> {where(status: 'active')}
+
+    scope :inactive, -> {where(status: 'inactive')}
+
 
     # validates :is_admin, inclusion: [false, true], if: -> { is_admin.nil? == false}
 

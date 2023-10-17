@@ -47,35 +47,35 @@ class Album < ActiveRecord::Base
     #     p 'before destroy 2'
     # end
 
-    before_destroy do
-        p 'before destroy 1'
-    end
-
-    # Không nên dùng around
-    # around_destroy do
-    #     p 'around destroy'
+    # before_destroy do
+    #     p 'before destroy 1'
     # end
 
-    after_destroy do
-        p 'after destroy'
-        # raise 'abc'
-    end
+    # # Không nên dùng around
+    # # around_destroy do
+    # #     p 'around destroy'
+    # # end
 
-    after_commit do
-        p 'after commit'
-    end
+    # after_destroy do
+    #     p 'after destroy'
+    #     # raise 'abc'
+    # end
+
+    # after_commit do
+    #     p 'after commit'
+    # end
     
-    after_rollback do
-        p 'after rollback'
-    end
+    # after_rollback do
+    #     p 'after rollback'
+    # end
 
-    after_find do
-        p 'Bạn đã tìm thấy user'
-    end
+    # after_find do
+    #     p 'Bạn đã tìm thấy user'
+    # end
 
-    after_initialize do |user|
-        p 'Bạn đã khởi tạo thành công 1 user'
-    end
+    # after_initialize do |user|
+    #     p 'Bạn đã khởi tạo thành công 1 user'
+    # end
 
     # after_touch do 
     #     P 'Bạn đã tác động thay đổi lên user'
