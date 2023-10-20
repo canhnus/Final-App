@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .wrapper{
+            margin: 100px auto;
+            text-align: center;
+        }
+        h1{
+            color: blue;
+        }
+        input{
+            padding: 5px 10px;
+            float: right;
+            
+        }
+        label{
+            float: left
+        }
+        .form{
+            padding: 20px 20px;
+            border: 2px solid;
+            border-radius: 5px;
+            width: 400px;
+            margin: 20px auto;
+        }
+        a.forgot{
+            padding-bottom: 50px;
+        }
+        i{
+            font-size:100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <h1>Fotobook Signup</h1>
+        
+        <div class ="form">
+            <form action="">
+                
+                <label for="">First Name</label>
+                <input type="text" name ="user[first_name]" id ="user_first_name" placeholder="First Name" required> <br><br>
+                <label for="">Last Name</label>
+                <input type="text" name ="user[last_name]" id ="user_last_name" placeholder="Last Name" required> <br><br>
+
+                <label for="">Email</label>
+                <input type="email" name ="user[email]" id ="user_email" placeholder="Email" required> <br><br>
+
+                <label for="">New Password</label>
+                <input type="password" name = "user[password]" id = "user_password" placeholder="Password" required> <br><br>
+
+                <label for="">Password Confimation</label>
+                <input type="password" name = "user[password_confirmation]" id = "user_password_confirmation" placeholder="Password" required> <br><br>
+
+                <input style="float: none; margin-top: 20px;" type="submit" value="Signup"> <br><br>
+            </form>
+    
+            <br>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

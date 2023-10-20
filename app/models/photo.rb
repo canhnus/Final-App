@@ -1,7 +1,7 @@
 class Photo < ApplicationRecord
-    belongs_to :album
+    belongs_to :user
 
-    # validates :url, presence: true
+    has_many :albums, through: albums_photos
 
-    # validates :url, uniqueness: true
+    enum photo_type: [:private, :public]
 end
