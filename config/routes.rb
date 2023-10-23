@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   
-  root "logins#login"
+  root "users#index"
 
-  get "/login" => "logins#login"
+  # get "/login" => "login"
 
-  get "/signup" => "signups#signup"
-
-  get "/signups/signup" => "signups#signup"
   
 end

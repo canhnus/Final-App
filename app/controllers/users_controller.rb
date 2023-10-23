@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    render partial: 'layouts/navbar'
+    # @users = User.all
   end
 
 
@@ -21,9 +22,5 @@ class UsersController < ApplicationController
   end
 
   def destroy
-  end
-  
-  def hello
-    @test = "Hello NUS"
   end
 end
