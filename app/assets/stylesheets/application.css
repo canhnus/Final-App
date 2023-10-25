@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(222, 224, 225);
+    font-family: sans-serif;
+}

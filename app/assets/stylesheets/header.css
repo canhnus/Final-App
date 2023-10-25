@@ -1,0 +1,18 @@
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 100px;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.wrapper{
+    background-color: rgba(67, 145, 234, 0.705);
+    padding-top: 5.5px;
+    position: fixed;
+    top: 0;
+    color: #fff;
+    /* width: 100%; */
+}

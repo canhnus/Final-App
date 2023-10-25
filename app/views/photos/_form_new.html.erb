@@ -1,0 +1,10 @@
+<%= form_with model: photo, url: user_photos_path do |form| %>
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title %> <br>
+  <%= form.label :description, "Description" %>
+  <%= form.text_area :description %><br>
+  <%= form.label :sharing_mode, "Sharing mode" %>
+  <%= form.select(:photo_type, [["Public", 0],["Private", 1]]) %>
+  <%= form.file_field :photo_url%><br>
+  <%= form.submit %><br>
+<% end %>   

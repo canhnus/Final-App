@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
     devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -17,7 +21,8 @@ class User < ApplicationRecord
     # has_many :albums, primary_key: :user_code, foreign_key: "account_id"
 
     has_many :albums
-    enum role: [:guest, :normal, :admin]
+    has_many :photos
+    enum :role, [:normal, :admin], default: :normal
 
     # validates_associated :albums
 

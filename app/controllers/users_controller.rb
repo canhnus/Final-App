@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   def index
-    render partial: 'layouts/navbar'
+    # render partial: 'layouts/navbar'
     # @users = User.all
   end
 
